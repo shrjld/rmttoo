@@ -1,0 +1,13 @@
+
+@mixin side-bar-header {
+    background-color: $color-orange !important;
+    color: white;
+}
+
+@mixin side-bar($list-style, $font-weight) {
+    list-style: $list-style !important;
+    font-weight: $font-weight;
+    background-color: $background1 !important;
+     list-style-position: inside !important;
+}
+

@@ -1,0 +1,379 @@
+@import 'mixin.scss';
+@import 'init.scss';
+
+$listgroupColor: red;
+$direction: rtl;
+$color: rgb(87, 87, 87);
+$color-light: #e8e8e8;
+$p-y: 3px;
+$color-orange: orange;
+$border-ra: 7px;
+$color-link: rgb(99, 147, 209);
+$text: justify;
+$font: 14px;
+$border: 1px solid rgb(207, 207, 207);
+$background2: #5f5f64;
+$footer-background-color: #03203e;
+$footer-link-color: #fd7e2a;
+
+* {
+    direction: $direction;
+    font-family: vazirmatn fd;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ========================== navbar =======================//
+.navbar-container {
+    background-color: rgb(205, 210, 216);
+    height: 50px;
+}
+
+.navbar-header {
+    padding: 0%;
+}
+
+.nav-item {
+    height: 8vh;
+    padding: 15px 0px;
+
+}
+
+.nav-link-s,
+.nav-link-b {
+    border-left: 2px solid rgb(13, 50, 145);
+    color: rgb(13, 50, 145);
+    font-size: 15px;
+    padding: 6px;
+    word-spacing: 3PX;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+.nav-link-b:hover,
+.nav-link-s:hover {
+    color: #fd7e2a;
+}
+
+.nav-link-b>.nav-item {
+    width: 130px;
+    text-align: center;
+}
+
+.nav-link-s>.nav-item {
+    width: 90px;
+    text-align: center;
+}
+
+@media(max-width:1100px) {
+    .navbar-collapse {
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: white;
+        z-index: 9999;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .navbar-container {
+        position: relative;
+        z-index: 1000;
+        width: 45%;
+        margin-right: 0%;
+        background-color: white;
+    }
+
+    .nav-link-b,
+    .nav-link-s {
+        border-left: none;
+        padding: 5px 10px;
+        color: #727272;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bolder;
+        text-align: right;
+        opacity: 0.9;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgb(195, 195, 195);
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+    }
+
+    .nav-item:hover {
+        background-color: #dfdfdf;
+        opacity: .9;
+    }
+
+    .nav-link-b:hover,
+    .nav-link-s:hover {
+        color: #4d4d4d;
+    }
+
+    .navbar-nav {
+        padding-bottom: 150px;
+
+    }
+
+}
+
+
+// ============================= end navbar =====================//
+
+
+// ============================= breadcrumb =====================//
+.crumb {
+    background-color: #f2f3f5;
+    height: 50px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    font-size: $font;
+}
+
+.crumb-item:hover {
+    color: $color-orange;
+}
+
+// ============================= breadcrumb end=====================//
+
+// ============================= traffic section start =====================//
+.body-info {
+    background-color: $color-light;
+    font-size: $font;
+    color: $color;
+
+
+}
+
+.para-about-trafic {
+    text-align: $text ;
+}
+
+.img-traffic {
+    border: $border;
+}
+
+.traffic-icons {
+    background-color: $background2;
+    padding-top: $p-y;
+    padding-bottom: $p-y;
+}
+
+
+.traffic-icons:hover {
+    background-color: $color-orange ;
+    border-radius: $border-ra;
+}
+
+.rmtolink {
+    color: $color-link;
+
+}
+
+// ------------------------sideBar---------------------
+
+.side-bar-container{
+    border-radius: none;
+    text-align: right;
+    font-size: $font;
+}
+.rmtolink:hover {
+    color: $color-orange;
+}
+
+.print {
+    border: none;
+    background-color: rgb(0, 65, 123);
+    padding: 5px 20px;
+    border-radius: $border-ra;
+    color: $color-light;
+   
+}
+
+.print:hover {
+    background-color: $color-orange;
+}
+
+// ============================= traffic section end =====================//
+
+.Lgroup1 {
+    @include side-bar('none', 'normal');
+}
+
+.listGroup-header{
+    @include side-bar-header;
+}
+
+.listGroup1{
+    @include side-bar(none,normal);
+}
+
+.listGroup2{
+    @include side-bar(circle,bold);
+}
+
+.listGroup3{
+    @include side-bar(circle,bold);
+}
+
+
+  
+// ----------------------------footer-------------------------------------------------
+
+footer {
+    background-color: $footer-background-color ;
+
+
+}
+
+div .footer-container {
+
+
+    width: 100%;
+}
+
+
+.footer-link {
+    display: block;
+    text-decoration: none;
+
+}
+
+.footer-link:hover {
+    color: $footer-link-color;
+}
+
+.footer-link,
+.footer-para {
+    color: white;
+    font-size: 14px;
+    letter-spacing: -1px;
+    text-align: justify;
+}
+
+.footer-para {
+    line-height: 13px;
+}
+
+.footer-link {
+
+    white-space: nowrap;
+}
+
+.email-img {
+    filter: none;
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+
+h6 {
+    color: white;
+}
+
+.footer-section3-h6 {
+    color: white;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+    opacity: 1;
+}
+
+.footer-section3 {
+    margin-top: 13px;
+
+
+}
+
+.footer-section3>img {
+    height: 230px;
+
+}
+
+
+
+// -----------{--------------------------copy right-------------------------------// // }
+.copyright-para {
+
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    font-weight: normal;
+    padding: 7px;
+    letter-spacing: -1px;
+
+}
+
+.copyright-para-b {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    font-weight: normal;
+    border-left: 1px solid rgb(68, 65, 65);
+    padding: 7px;
+    letter-spacing: -1px;
+
+}
+
+.container-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+// -------------------------after copy right------------------------------------
+.after-copyright-logo {
+
+    border-left: 10px solid rgb(27, 27, 27);
+
+}
+
+.after-copyright-para {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-weight: normal;
+    line-height: 8px;
+
+}
+
+.after-copyright-link {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-weight: normal;
+    text-decoration: none;
+    color: rgb(88, 88, 184);
+}
+
+.after-copyright-link:hover {
+    color: $footer-link-color;
+
+}
+
+
+    .footer-section3,
+    .footer-section4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-section3>img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .footer-link,
+    .footer-para {
+        font-size: 12px;
+        text-align: center;
+    }
